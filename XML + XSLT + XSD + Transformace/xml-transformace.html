@@ -1,0 +1,311 @@
+﻿<html>
+   <style>
+
+  .odd{
+  background-color:#F0FFFF;
+  }
+
+  body{
+
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  }
+
+  table{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  #logo{
+  width: 500px;
+  }
+
+  #autor{
+  right:175;
+  position:relative;
+  top:200;
+  }
+
+  #fakulta{
+  position:relative;
+
+  }
+
+
+
+
+  #uvod{
+height:1000;
+
+  width:800;
+  display: inline-block;
+  border:1px solid black;
+  }
+
+  #nazev_prace{
+  position:relative;
+  top:100;
+
+  }
+
+  #datum{
+  position:relative;
+  top:200;
+  }
+
+  #popis_prace{
+
+
+  top:200;
+
+
+  }
+
+#popis_prace{
+
+border:1px;
+  display: inline-block;
+
+
+  bottom100;
+
+  }
+
+
+</style>
+   <body>
+      <div id="uvod">
+         <h1>Bakalařská práce</h1>
+         <h2 id="fakulta">Česká zemědělská univertiza, Provozně ekonomická fakulta Obor : INFO</h2>
+         <img id="logo" src="czuLogo.gif"/>
+         <h1 id="nazev_prace">(Nejen)Agilní metodiky vývoje software / Značkovací jaziky </h1>
+         <span id="datum">Datum Vypracování : 18,04,2018</span>
+         <h2 id="autor">Jméno : Jan Pultzner</h2>
+         <span id="popis_prace">
+            <strong>Popis práce: </strong>V této práci se podíváme na problematiky vývoje software, jaké problematiky existují, jejich výhody a nevýhody a obecné použití. Dále rozvedu metodologii
+                 výběru nejlepší metodiky pro vývoje software pro daný projekt, nebo firemní organizaci.
+    </span>
+      </div>
+      <div>
+         <h3>Seznam metodik</h3>
+         <table border="2" bgcolor="silver" color="white">
+            <tr bgcolor="#9acd32">
+               <th>Název</th>
+               <th>Metodika</th>
+               <th>Zaměření</th>
+               <th>Autor</th>
+               <th>Rok</th>
+            </tr>
+            <tr class="odd">
+               <td>Scrum</td>
+               <td>agilni</td>
+               <td>Rychlost a komunikace</td>
+               <td>Hirotaka Takeuchi and Ikujiro Nonaka</td>
+               <td>1996</td>
+            </tr>
+            <tr class="odd">
+               <td>SSADM</td>
+               <td>strukturovana</td>
+               <td>Organizace a dokumentace</td>
+               <td>Central Computer and Telecommunications Agency</td>
+               <td>1980</td>
+            </tr>
+            <tr class="odd">
+               <td>XP</td>
+               <td>agilni</td>
+               <td>Rychlé dodání iterací</td>
+               <td>Beckem</td>
+               <td>1999</td>
+            </tr>
+            <tr class="odd">
+               <td>DSDM </td>
+               <td>agilni</td>
+               <td>Minimalizace risku</td>
+               <td>Office of Government Commerce - UK</td>
+               <td>1994</td>
+            </tr>
+            <tr class="odd">
+               <td>Vodopád </td>
+               <td>strukturovana</td>
+               <td>Organizace a kvalita iterací</td>
+               <td>D.Bennington</td>
+               <td>1983</td>
+            </tr>
+         </table>
+      </div>
+      <h3>Agilní metodiky</h3>
+      <table border="2">
+         <tr bgcolor="#9acd32">
+            <th>Nazev</th>
+            <th>Autor</th>
+            <th>Rok</th>
+            <th>Výhoda</th>
+            <th>Nevyhoda</th>
+            <th>pouziti</th>
+            <th>Délka sprintů</th>
+            <th>Tvoření dokumentace</th>
+            <th>Hodnocení</th>
+         </tr>
+         <tr class="odd">
+            <td>Scrum</td>
+            <td>Hirotaka Takeuchi and Ikujiro Nonaka</td>
+            <td>1996</td>
+            <td>velmi rychlý feedback, velmi rychlé iterace</td>
+            <td>Velký risk Scope Creep, nutnost zkušeností</td>
+            <td>Malé firmy</td>
+            <td>30</td>
+            <td>ne</td>
+            <td>Ideální</td>
+         </tr>
+         <tr class="odd">
+            <td>Extreme programming</td>
+            <td>Beckem</td>
+            <td>1999</td>
+            <td>Jednoduchost, zaměření se na rychlé dodání iterace</td>
+            <td>Nedostatečné zaměření na design, horší kvalita kodu</td>
+            <td>Velké firmy</td>
+            <td>80</td>
+            <td>ne</td>
+            <td>Velmi uspokojivé</td>
+         </tr>
+         <tr class="odd">
+            <td>Dynamic systems development method</td>
+            <td>Office of Government Commerce - UK</td>
+            <td>1994</td>
+            <td>Prioritizace, minimalizace risku, maximalizace výhod</td>
+            <td>Vyžaduje extenzivní zapojení zákazníka</td>
+            <td>strední firmy</td>
+            <td>20</td>
+            <td>ano</td>
+            <td>mírně neuspokojivé</td>
+         </tr>
+      </table>
+      <span>Hodnocení Agilních systémů :56</span>
+      <h3>Strukturované metodiky</h3>
+      <table border="2">
+         <tr bgcolor="#9acd32">
+            <th>Nazev</th>
+            <th>Autor</th>
+            <th>Rok</th>
+            <th>Výhoda</th>
+            <th>Nevyhoda</th>
+            <th>pouziti</th>
+            <th>pocet_iteraci</th>
+            <th>Délka sprintů</th>
+            <th>Tvoření dokumentace</th>
+            <th>Hodnocení</th>
+         </tr>
+         <tr class="odd">
+            <td>Structured systems analysis and design method</td>
+            <td>Central Computer and Telecommunications Agency</td>
+            <td>1980</td>
+            <td>Velmi dobrá analýza, Velká srozumitelnost</td>
+            <td>Neflexibilní kontrola, zdlouhavé, drahé</td>
+            <td>Velké firmy</td>
+            <td>8</td>
+            <td>60</td>
+            <td>ano</td>
+            <td>Průměrné</td>
+         </tr>
+         <tr class="odd">
+            <td>Waterfall</td>
+            <td>D.Bennington</td>
+            <td>1983</td>
+            <td>Jasně definovaný časový úsek, Disciplinovaná</td>
+            <td>Získávání informace je riskantní, těžká změna</td>
+            <td>Malé i velké firmy</td>
+            <td>2</td>
+            <td>32</td>
+            <td>ano</td>
+            <td>neuspokojivé</td>
+         </tr>
+      </table>
+      <span>Hodnocení Strukturovaných systémů : 18</span>
+      <div>
+         <article>
+            <br>
+               <h2>Agilní metodiky vývoje softwaru jsou</h2>
+            </br>
+            <br>
+               <strong>Popis </strong>skupiny metod určených pro vyvíjení softwaru kde se dává na jevo iterativní a inkrementální vývoj</br>
+            <br>
+               <strong>Hlavní výhody jsou :</strong>Rychlé dodávání softwaru</br>
+            <br>
+               <strong>Hlavní priority jsou </strong>Zaměření na lidi a jejich spolupráci, rychlá reakce na změny</br>
+            <br>
+               <strong>Styl plánování a implementace </strong>Iterativní</br>
+            <br>
+               <strong>Průměrné náklady na zadevední agilních metodik je: </strong>8000 kč</br>
+            <br>
+               <strong>Styl vedení je : </strong>Decentralizované</br>
+            <br>
+               <strong>Styl organizace : </strong>samoorganizované kč</br>
+            <br>
+               <strong>Metodika je vhodná pro </strong>Malé a středně velké firmy a nevhodné pro Velé firmy</br>
+            <br>
+               <strong>Lidé ji hodnotí jako </strong>Velmi populární</br>
+            <br>
+               <strong>Byla použitá analíza </strong>MinMax</br>
+            <br>
+               <strong>Maximální score pro tuto metodu je </strong>32 a minimální score je 0</br>
+         </article>
+         <br>
+            <span>Firmy využívající agilní metodiky</span>
+         </br>
+         <td>Tricentis</td>
+         <td>ThoughtWorks</td>
+         <td>Sky</td>
+         <td>CA Technologies</td>
+         <td>Cognizant</td>
+         <td/>
+      </div>
+      <div>
+         <br>
+            <span>
+               <strong>Použitá literatura </strong>
+            </span>
+         </br>
+         <br>
+            <td>1 -  http://blog.nny.cz/740763-klasicke-a-agilni-metodiky-vyvoje-software.php</td>
+         </br>
+         <br>
+            <td>2 -  https://www.360logica.com/blog/agile-development-advantages-disadvantages-and-when-to-use-it/</td>
+         </br>
+         <br>
+            <td>3 -  https://www.smartsheet.com/agile-vs-scrum-vs-waterfall-vs-kanban</td>
+         </br>
+         <br>
+            <td>4 -  https://hygger.io/blog/agile-in-comparison-advantages-and-disadvantages/</td>
+         </br>
+      </div>
+      <div>
+         <br>
+            <span>
+               <strong>Použité tabulky </strong>
+            </span>
+         </br>
+         <br>
+            <td>1 -  Seznam Metodik</td>
+         </br>
+         <br>
+            <td>2 -  Agilní metodiky</td>
+         </br>
+         <br>
+            <td>3 -  Strukturované metodiky</td>
+         </br>
+      </div>
+      <div>
+         <br>
+            <span>
+               <strong>Použité obrázky </strong>
+            </span>
+         </br>
+         <br>
+            <td>1 -  Logo - Čzu</td>
+         </br>
+      </div>
+   </body>
+</html>

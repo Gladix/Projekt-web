@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+    <xs:element name="bakalarska_prace" type="bakalarska_praceType"/>
+    <xs:complexType name="literaturaType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="odkaz"/>
+        </xs:sequence>
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="pouzita_literaturaType">
+        <xs:sequence>
+            <xs:element type="literaturaType" name="literatura" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tabulkaType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="nazev_tabulky"/>
+        </xs:sequence>
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="pouzite_tabulkyType">
+        <xs:sequence>
+            <xs:element type="tabulkaType" name="tabulka" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="obrazekType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="nazev_obrazku"/>
+        </xs:sequence>
+        <xs:attribute type="xs:byte" name="id"/>
+    </xs:complexType>
+    <xs:complexType name="pouzite_obrazkyType">
+        <xs:sequence>
+            <xs:element type="obrazekType" name="obrazek"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="informaceType">
+        <xs:sequence>
+            <xs:element  name="den">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="30"/>
+                    </xs:restriction>
+                </xs:simpleType>
+
+            </xs:element>
+            <xs:element  name="mesic">
+
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="12"/>
+                    </xs:restriction>
+                </xs:simpleType>
+
+            </xs:element>
+            <xs:element name="rok">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="2017"/>
+                        <xs:maxInclusive value="2018"/>
+                    </xs:restriction>
+                </xs:simpleType>
+
+            </xs:element>
+            <xs:element type="xs:string" name="nazev_skoly"/>
+            <xs:element  name="fakulta">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:whiteSpace value="preserve"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="xs:string" name="tema_prace"/>
+            <xs:element type="xs:string" name="jmeno_prace"/>
+            <xs:element  name="popis_prace">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="200"/>
+                        <xs:maxLength value="300"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="xs:string" name="realne_tema_prace"/>
+            <xs:element type="xs:string" name="obrazek"/>
+            <xs:element type="pouzita_literaturaType" name="pouzita_literatura"/>
+            <xs:element type="pouzite_tabulkyType" name="pouzite_tabulky"/>
+            <xs:element type="pouzite_obrazkyType" name="pouzite_obrazky"/>
+            <xs:element type="xs:string" name="metaAutor"/>
+            <xs:element type="xs:string" name="metaDatum"/>
+            <xs:element type="xs:string" name="metaNazevPrace"/>
+            <xs:element type="xs:string" name="metaSkupina"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="nazevType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="plny_nazev" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="scoreType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:byte" name="hodnota" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="metodikaType">
+        <xs:sequence>
+            <xs:element type="nazevType" name="nazev"/>
+            <xs:element type="xs:string" name="autor"/>
+            <xs:element name="rok">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:length value="4"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="xs:string" name="vyhoda"/>
+            <xs:element type="xs:string" name="nevyhoda"/>
+            <xs:element type="scoreType" name="score"/>
+            <xs:element type="xs:string" name="pouziti"/>
+            <xs:element type="xs:string" name="zamereni"/>
+            <xs:element type="xs:byte" name="delka_sprintu"/>
+            <xs:element type="xs:byte" name="pocet_iteraci" minOccurs="0"/>
+            <xs:element  name="dokumentace">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="ano"/>
+                        <xs:enumeration value="ne"/>
+                        <xs:enumeration value="nevim"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="typ" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="metodikyType">
+        <xs:sequence>
+            <xs:element type="metodikaType" name="metodika" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="firmaType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:byte" name="id" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="firmyType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="vysvetlivka"/>
+            <xs:element type="firmaType" name="firma" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="agilniType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="nadpis"/>
+            <xs:element type="xs:string" name="popis"/>
+            <xs:element type="xs:string" name="princip"/>
+            <xs:element type="xs:string" name="priorita"/>
+            <xs:element type="xs:string" name="vhodne"/>
+            <xs:element type="xs:string" name="nevhodne"/>
+            <xs:element type="xs:string" name="proces"/>
+            <xs:element type="xs:string" name="vedeni"/>
+            <xs:element  name="organizace">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="samoorganizované|autokraticke"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="cena_zavedeni">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="0"/>
+                    <xs:maxInclusive value="9000"/>
+                </xs:restriction>
+            </xs:simpleType>
+
+        </xs:element>
+            <xs:element type="xs:string" name="popularita"/>
+            <xs:element type="xs:byte" name="maximalni_score"/>
+            <xs:element type="xs:byte" name="minimalni_score"/>
+            <xs:element type="xs:string" name="popis_analizy"/>
+            <xs:element type="firmyType" name="firmy"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="popis_metodikType">
+        <xs:sequence>
+            <xs:element type="agilniType" name="agilni"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="bakalarska_praceType" mixed="true">
+        <xs:sequence>
+            <xs:element type="informaceType" name="informace"/>
+            <xs:element type="metodikyType" name="metodiky"/>
+            <xs:element type="popis_metodikType" name="popis_metodik"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="autor"/>
+        <xs:attribute type="xs:string" name="obor"/>
+    </xs:complexType>
+</xs:schema>

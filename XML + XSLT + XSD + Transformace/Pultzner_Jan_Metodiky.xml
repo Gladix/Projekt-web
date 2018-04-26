@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Pultzner_Jan_Metodiky.xslt"?>
+
+<!--
+   Veškerá validace proběhla z https://www.freeformatter.com/xml-validator-xsd.html
+    -->
+
+<bakalarska_prace autor="Jan Pultzner" obor="INFO" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Pultzner_Jan_Metodiky.xsd">
+
+<informace>
+    <den>18</den>
+    <mesic>4</mesic>
+    <rok>2018</rok>
+
+
+    <nazev_skoly>Česká zemědělská univertiza</nazev_skoly>
+    <fakulta>Provozně ekonomická fakulta</fakulta>
+    <tema_prace>Bakalařská práce</tema_prace>
+    <jmeno_prace>(Nejen)Agilní metodiky vývoje software</jmeno_prace>
+    <popis_prace>V této práci se podíváme na problematiky vývoje software, jaké problematiky existují, jejich výhody a nevýhody a obecné použití. Dále rozvedu metodologii
+                 výběru nejlepší metodiky pro vývoje software pro daný projekt, nebo firemní organizaci.
+    </popis_prace>
+    <realne_tema_prace>Značkovací jaziky </realne_tema_prace>
+    <obrazek>czuLogo.gif</obrazek>
+    <pouzita_literatura>
+        <literatura id="1"> <odkaz>http://blog.nny.cz/740763-klasicke-a-agilni-metodiky-vyvoje-software.php</odkaz>  </literatura>
+        <literatura id="2"> <odkaz>https://www.360logica.com/blog/agile-development-advantages-disadvantages-and-when-to-use-it/</odkaz>  </literatura>
+        <literatura id="3"> <odkaz>https://www.smartsheet.com/agile-vs-scrum-vs-waterfall-vs-kanban</odkaz>  </literatura>
+        <literatura id="4"> <odkaz>https://hygger.io/blog/agile-in-comparison-advantages-and-disadvantages/</odkaz>  </literatura>
+    </pouzita_literatura>
+
+    <pouzite_tabulky>
+        <tabulka id="1"> <nazev_tabulky>Seznam Metodik</nazev_tabulky>  </tabulka>
+        <tabulka id="2"> <nazev_tabulky>Agilní metodiky</nazev_tabulky>  </tabulka>
+        <tabulka id="3"> <nazev_tabulky>Strukturované metodiky</nazev_tabulky>  </tabulka>
+    </pouzite_tabulky>
+
+    <pouzite_obrazky>
+        <obrazek id="1"> <nazev_obrazku>Logo - Čzu</nazev_obrazku>  </obrazek>
+
+    </pouzite_obrazky>
+
+    <metaAutor>Jan Pultzner</metaAutor>
+    <metaDatum>18,4,2018</metaDatum>
+    <metaNazevPrace>Projekt : Značkovací jaziky</metaNazevPrace>
+    <metaSkupina>Lichý týden</metaSkupina>
+
+</informace>
+    <metodiky>
+    <metodika typ="agilni">
+
+        <nazev plny_nazev="Scrum">Scrum</nazev>
+        <autor>Hirotaka Takeuchi and Ikujiro Nonaka</autor>
+        <rok>1996</rok>
+        <vyhoda>velmi rychlý feedback, velmi rychlé iterace</vyhoda>
+        <nevyhoda>Velký risk Scope Creep, nutnost zkušeností</nevyhoda>
+        <score hodnota="28">Ideální</score>
+        <pouziti>Malé firmy</pouziti>
+        <zamereni>Rychlost a komunikace</zamereni>
+        <delka_sprintu>30</delka_sprintu>
+        <dokumentace>ne</dokumentace>
+    </metodika>
+
+        <metodika typ="strukturovana">
+
+            <nazev plny_nazev="Structured systems analysis and design method">SSADM</nazev>
+            <autor>Central Computer and Telecommunications Agency</autor>
+            <rok>1980</rok>
+            <vyhoda>Velmi dobrá analýza, Velká srozumitelnost</vyhoda>
+            <nevyhoda>Neflexibilní kontrola, zdlouhavé, drahé</nevyhoda>
+            <score hodnota="14">Průměrné</score>
+            <pouziti>Velké firmy</pouziti>
+            <zamereni>Organizace a dokumentace</zamereni>
+            <delka_sprintu>60</delka_sprintu>
+            <pocet_iteraci>8</pocet_iteraci>
+            <dokumentace>ano</dokumentace>
+        </metodika>
+
+        <metodika typ="agilni">
+
+            <nazev plny_nazev="Extreme programming">XP</nazev>
+            <autor>Beckem</autor>
+            <rok>1999</rok>
+            <vyhoda>Jednoduchost, zaměření se na rychlé dodání iterace</vyhoda>
+            <nevyhoda>Nedostatečné zaměření na design, horší kvalita kodu</nevyhoda>
+            <score hodnota="20">Velmi uspokojivé</score>
+            <pouziti>Velké firmy</pouziti>
+            <zamereni>Rychlé dodání iterací</zamereni>
+            <delka_sprintu>80</delka_sprintu>
+            <dokumentace>ne</dokumentace>
+        </metodika>
+
+
+<metodika typ="agilni">
+    <nazev plny_nazev="Dynamic systems development method">DSDM </nazev>
+    <autor>Office of Government Commerce - UK</autor>
+    <rok>1994</rok>
+    <vyhoda>Prioritizace, minimalizace risku, maximalizace výhod</vyhoda>
+    <nevyhoda>Vyžaduje extenzivní zapojení zákazníka</nevyhoda>
+    <score hodnota="8">mírně neuspokojivé</score>
+    <pouziti>strední firmy</pouziti>
+    <zamereni>Minimalizace risku</zamereni>
+    <delka_sprintu>20</delka_sprintu>
+    <dokumentace>ano</dokumentace>
+
+</metodika>
+
+        <metodika typ="strukturovana">
+            <nazev plny_nazev="Waterfall">Vodopád </nazev>
+            <autor>D.Bennington</autor>
+            <rok>1983</rok>
+            <vyhoda>Jasně definovaný časový úsek, Disciplinovaná</vyhoda>
+            <nevyhoda>Získávání informace je riskantní, těžká změna</nevyhoda>
+            <score hodnota="4">neuspokojivé</score>
+            <pouziti>Malé i velké firmy</pouziti>
+            <zamereni>Organizace a kvalita iterací</zamereni>
+            <delka_sprintu>32</delka_sprintu>
+            <pocet_iteraci>2</pocet_iteraci>
+            <dokumentace>ano</dokumentace>
+        </metodika>
+</metodiky>>
+
+<popis_metodik>
+    <agilni>
+        <nadpis>Agilní metodiky vývoje softwaru jsou</nadpis>
+        <popis>skupiny metod určených pro vyvíjení softwaru kde se dává na jevo iterativní a inkrementální vývoj</popis>
+        <princip>Rychlé dodávání softwaru</princip>
+        <priorita>Zaměření na lidi a jejich spolupráci, rychlá reakce na změny</priorita>
+        <vhodne>Malé a středně velké firmy</vhodne>
+        <nevhodne>Velé firmy</nevhodne>
+        <proces>Iterativní</proces>
+        <vedeni>Decentralizované</vedeni>
+        <organizace>samoorganizované</organizace>
+        <cena_zavedeni>8000</cena_zavedeni>
+        <popularita>Velmi populární</popularita>
+        <maximalni_score>32</maximalni_score>
+        <minimalni_score>0</minimalni_score>
+        <popis_analizy>MinMax</popis_analizy>
+        <firmy>
+            <vysvetlivka>Firmy využívající agilní metodiky</vysvetlivka>
+            <firma id="1">Tricentis</firma>
+            <firma id="2">ThoughtWorks</firma>
+            <firma id="3">Sky</firma>
+            <firma id="4">CA Technologies</firma>
+            <firma id="5">Cognizant</firma>
+        </firmy>
+
+    </agilni>
+
+
+</popis_metodik>
+</bakalarska_prace>
+
+
+
